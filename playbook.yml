@@ -28,3 +28,16 @@
       changed_when: True
       notify:
         - "role change"
+
+- name: Closing Play
+  hosts: all
+  handlers:
+    - include: ./handlers/main.yml
+  tasks:
+    - name: I want it all
+      debug:
+        msg: "I want it now!"
+      changed_when: True
+      notify:
+        - "Queen"
+
