@@ -1,0 +1,15 @@
+molecule==1.23.1
+paramiko==2.1.1
+docker==2.2.1
+docker-pycreds==0.2.1
+python-vagrant==0.5.14
+ansible-lint==3.4.8
+flake8==3.0.4
+pyflakes==1.2.3
+testinfra==1.4.5
+robotframework==3.0.2
+robotframework-lint==0.9
+robotframework-debuglibrary==0.8
+robotframework-requests==0.4.7
+detox==0.11
+tox==2.7.0

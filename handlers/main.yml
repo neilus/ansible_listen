@@ -1,0 +1,10 @@
+---
+- name: Role Handler
+  debug:
+    msg: "Hi, I'm the role handler"
+  listen: "role change"
+
+- name: Another Role Handler
+  debug:
+    msg: "And another one bites the dust"
+  listen: "role change"

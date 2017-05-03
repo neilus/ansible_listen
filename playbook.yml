@@ -1,0 +1,30 @@
+---
+- name: Forplay
+  hosts: all
+  handlers:
+    - name: Some Generic Handler
+      debug:
+        msg: "Hello, I'm a generic handler"
+      listen: "Any Event"
+  roles:
+    - role: ansible_listen
+  tasks:
+    - name: Something
+      debug:
+        msg: "Do Something"
+      changed_when: True
+      notify:
+        - "Any Event"
+        - "role change"
+
+- name: Main Play
+  hosts: all
+  handlers:
+    - include: ./handlers/main.yml
+  tasks:
+    - name: Something Else
+      debug:
+        msg: "Do nothing"
+      changed_when: True
+      notify:
+        - "role change"
